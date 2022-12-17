@@ -1,12 +1,15 @@
-# Learning Flexbox CSS
+# Learning Flexbox and Grid CSS
 
-- Basics and terminology
+## Flexbox CSS
+
+- one dimensional (row or column)
+- Flexbox is a tool from CSS whose main purpose helps to order the elements and widgets in a user interface (Cards, Modals, Forms, Menus, etc.)
 
 ![Basics and terminology](https://css-tricks.com/wp-content/uploads/2018/11/00-basic-terminology.svg)
 
-## Flexbox Properties
+### Flexbox Properties
 
-### Properties for the Parent
+#### Properties for the Parent
 
 | Properties       | complement        | Note                                                                                                |
 | ---------------- | ----------------- | --------------------------------------------------------------------------------------------------- |
@@ -39,7 +42,7 @@
 |                  | space-around      |                                                                                                     |
 |                  | space-evenly      |                                                                                                     |
 
-### Properties for the Children (flex items)
+#### Properties for the Children (flex items)
 
 | Propertie    | Complement    | Note                                                                                                                        |
 | ------------ | ------------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -53,3 +56,12 @@
 |              | flex-end      |                                                                                                                             |
 |              | center        |                                                                                                                             |
 |              | baseline      |                                                                                                                             |
+
+---
+
+## Grid CSS
+
+- two-dimensional system
+- It's a tool to layout content sections where there are components (Headers, Footers, SideBars, Galleries,etc.)
+
+![layout](https://jonmircha.com/img/blog/grid-conceptos.png)
