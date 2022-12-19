@@ -65,3 +65,51 @@
 - It's a tool to layout content sections where there are components (Headers, Footers, SideBars, Galleries,etc.)
 
 ![layout](https://jonmircha.com/img/blog/grid-conceptos.png)
+
+### 1. Explicit Grid
+
+```css
+.class {
+  display: grid;
+  /* Columns and rows */
+  /* Grid 3cx3f */
+  grid-template-columns: 50% 100px 1fr;
+  grid-template-rows: 2rem 20vh 30%;
+  /* Grid 5cx4f */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  /* Grid 4cx5f */
+  grid-template-columns: 20% repeat(2, 30%) 20%;
+  grid-template-rows: repeat(5, auto);
+
+  /* Space between grid cells */
+  /* gap: row column*/
+  gap: 100px 0px;
+}
+```
+
+#### 1.1 Grid area and position
+
+```css
+.class .item:nth-child(10) {
+  /* item position */
+  /* Shortcut */
+  grid-row: 2 / 3;
+  grid-column: 3/5;
+  /* item area */
+  /* grid-area: grid-row-start/grid-column-start/grid-column-start/grid-column-end */
+  grid-area: 2/3/3/5;
+}
+
+.class .item:nth-child(12) {
+  /* Abarcar posiciones en la grid*/
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.class .item:nth-child(15) {
+  /* from line to grid cell */
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
+}
+```
