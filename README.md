@@ -88,7 +88,7 @@
 }
 ```
 
-#### 1.1 Grid area and position
+#### 1.1 Grid position
 
 ```css
 .class .item:nth-child(10) {
@@ -96,8 +96,8 @@
   /* Shortcut */
   grid-row: 2 / 3;
   grid-column: 3/5;
-  /* item area */
-  /* grid-area: grid-row-start/grid-column-start/grid-column-start/grid-column-end */
+  /* item area/position */
+  /* grid-area: grid-row-start/grid-column-start/grid-row-end/grid-column-end */
   grid-area: 2/3/3/5;
 }
 
@@ -113,3 +113,63 @@
   grid-column: 1 / span 2;
 }
 ```
+
+#### 1.2 Grid Areas
+
+![Grid areas](https://css-tricks.com/wp-content/uploads/2018/11/dddgrid-template-areas.svg)
+
+```css
+.grid-areas {
+  display: grid;
+  /* Grid 2cx3r */
+  grid-template-columns: 1fr 200px;
+  grid-template-rows: 100px repeat(2, 1fr) 60px;
+  /* 
+  Grid-tamplate-areas: it draws our layout
+  Use . for draw a empty grid cell*/
+  grid-template-areas:
+    "header header"
+    "content sidebar"
+    "content ."
+    "footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.content {
+  grid-area: content;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.footer {
+  grid-area: footer;
+}
+```
+
+### 2. Implicit Grid
+
+- Talks about all the spaces where there aren't rows defined and how the items are layouted.
+
+![implicit grid](https://plectrolab.com/wp-content/uploads/2021/02/css-grid-layout-implicit-grid-1024x462.png)
+
+### 3. Grid Flow
+
+```css
+.grid-flow {
+  display: grid;
+  /* grid 5cx3r */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 150px);
+  grid-auto-flow: row; /* default:row */
+  grid-auto-rows: 100px; /* auto */
+  grid-auto-flow: column;
+  grid-auto-columns: 100px; /* auto */
+}
+```
+
+### 4. Grid flow Dense

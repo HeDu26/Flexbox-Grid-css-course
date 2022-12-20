@@ -86,7 +86,7 @@ img {
   grid-row: 2 / 3;
   grid-column: 3/5;
   /* Donde se posiciona el item */
-  /* grid-area: grid-row-start/gridrow-end/gid-column-start/grid-column-end */
+  /* grid-area: grid-row-start/grid-column-start/grid-row-end/grid-column-end */
   grid-area: 2/3/3/5;
 }
 
@@ -111,10 +111,66 @@ img {
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: [linea-c1] 1fr [linea-c2] 1fr [linea-c3]1fr[linea-c4];
   grid-template-rows: [linea-r1]1fr[linea-r2]1fr[linea-r3]1fr[linea-r4];
+  grid-template-rows: [linea-r1]auto[linea-r2]auto[linea-r3]auto[linea-r4];
 }
 
 .grid-line-names .item:nth-child(3) {
   color: coral;
   grid-row: linea-r3/linea-r4;
   grid-column: linea-c1/linea-c4;
+}
+
+/* Grid Areas */
+
+.grid-areas {
+  display: grid;
+  /* Grid 2cx3r */
+  grid-template-columns: 1fr 200px;
+  grid-template-rows: 100px repeat(2, 1fr) 60px;
+  /* 
+  Grid-tamplate-areas: it draws our layout
+  Use . for draw a empty grid cell*/
+  grid-template-areas:
+    "header header"
+    "content sidebar"
+    "content ."
+    "footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+
+.content {
+  grid-area: content;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* Implicit Grid */
+
+.grid-implicit {
+  display: grid;
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px);
+}
+
+/* Grid Flow */
+
+.grid-flow {
+  display: grid;
+  /* grid 5cx3r */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 150px);
+  grid-auto-flow: row; /* default:row */
+  grid-auto-rows: 100px; /* auto */
+  grid-auto-flow: column;
+  grid-auto-columns: 100px; /* auto */
 }
