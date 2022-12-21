@@ -159,6 +159,8 @@
 
 ### 3. Grid Flow
 
+- Like in flexbox could be rows or column.
+
 ```css
 .grid-flow {
   display: grid;
@@ -173,3 +175,71 @@
 ```
 
 ### 4. Grid flow Dense
+
+- Taking advantage of the spaces.
+
+- The grid flow dense property going to search spaces to fill them with the missing ones items.
+
+```css
+.grid-flow-dense {
+  display: grid;
+  /* Grid 5cX4r */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 200px);
+  grid-auto-flow: row dense;
+  grid-auto-flow: column dense;
+}
+```
+
+### 5. Superposition
+
+- We can use grid-row and grod-column to superput the items over other items.
+
+![superposition](https://mastery.games/img/overlapping-grid-items.jpg)
+
+### 6. Ordering
+
+- Like flexbox
+
+```css
+.grid-order .item:nth-child(2) {
+  order: 2; /* default: 0, positive and negative valors */
+}
+```
+
+### 7. item align
+
+1.  all the items
+
+```css
+.grid-align {
+  display: grid;
+  /* grid 3cx2r */
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 200px);
+  justify-items: stretch; /* default: stretch */
+  justify-items: center;
+  align-items: stretch; /* default: stretch */
+  align-items: center;
+}
+```
+
+2. independent item align
+
+```css
+.grid-align .item:nth-child(2) {
+  justify-self: start;
+  align-self: start;
+}
+```
+
+### 8. Track align
+
+```css
+.grid-align-tracks {
+  /* alignment in the X axis */
+  justify-content: center;
+  /* alignment in the Y axis */
+  align-content: center;
+}
+```
