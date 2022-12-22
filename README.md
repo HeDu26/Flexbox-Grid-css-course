@@ -14,8 +14,8 @@
     - [Ordering](#6-ordering)
     - [ item align](#7-item-align)
     - [Track align](#8-track-align)
-    - []()
-    - []()
+    - [Max and min of the Grid tracks](#9-max-and-min-of-the-grid-tracks)
+    - [Repeating patterns](#10-repeating-patterns)
     - []()
     - []()
 
@@ -263,4 +263,31 @@
 }
 ```
 
-### 9.
+### 9. Max and min of the Grid tracks
+
+- According to the content or pixels
+
+```css
+.grid-min-max {
+  display: grid;
+  /* 4cx?r */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(100px, 200px));
+  grid-template-columns: repeat(4, minmax(100px, max-content));
+  grid-template-columns: repeat(4, minmax(max-content, 200px));
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
+}
+```
+
+### 10. Repeating patterns
+
+```css
+.grid-repeat {
+  display: grid;
+  grid-template-columns: repeat(4, 10% 20% 30% 40%);
+  grid-template-columns: repeat(2, 10% 20% 30% 40%);
+  grid-template-columns: repeat(1, 10% 20% 30% 40%);
+  grid-template-rows: repeat(2, 100px 200px);
+  grid-auto-rows: 150px;
+}
+```
