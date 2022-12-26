@@ -291,3 +291,47 @@
   grid-auto-rows: 150px;
 }
 ```
+
+### 11. Dinamic Grids Responsive without media queries
+
+```css
+.grid-dynamics {
+  display: grid;
+  /* Grid de 4cx?r */
+  grid-template-columns: repeat(4, 100px);
+  /* Dinamic generator according to existent items*/
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* gap: 1vw 1vh; */
+}
+```
+
+### 12. Nested grid & subgrids
+
+1. Definir explícitamente el tamaño que ocupará el elemento que aplicará subgrid dentro del contenedor padre grid, es decir definir sus propiedades grid-column y grid-row.
+2. Aplicar display grid al elemento que aplicará subgrid.
+3. Aplicar el valor de subgrid a las columnas, a las filas o ambas depende de cómo se requiera
+
+```css
+.grid {
+  display: grid;
+  /* grid 3cx4r */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.subgrid {
+  grid-column: span 3;
+  grid-row: 1/3;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+```
