@@ -7,6 +7,8 @@
     - [Properties for the Children](#properties-for-the-children-flex-items)
   - [Grid CSS](#grid-css)
     - [Explicit Grid](#1-explicit-grid)
+      - [Grid lines](#11-grid-lines)
+      - [Grid Areas](#12-grid-areas)
     - [Implicit Grid](#2-implicit-grid)
     - [Grid Flow](#3-grid-flow)
     - [Grid flow Dense](#4-grid-flow-dense)
@@ -16,8 +18,8 @@
     - [Track align](#8-track-align)
     - [Max and min of the Grid tracks](#9-max-and-min-of-the-grid-tracks)
     - [Repeating patterns](#10-repeating-patterns)
-    - []()
-    - []()
+    - [Responsive Dinamic Grids without media queries](#11-dinamic-grids-responsive-without-media-queries)
+    - [Nested grid & subgrids](#12-nested-grid--subgrids)
 
 ## Flexbox CSS
 
@@ -107,7 +109,7 @@
 }
 ```
 
-#### 1.1 Grid position
+#### 1.1 Grid lines
 
 ```css
 .class .item:nth-child(10) {
