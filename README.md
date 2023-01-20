@@ -24,7 +24,7 @@
 ## Flexbox CSS
 
 - one dimensional (row or column)
-- Flexbox is a tool from CSS whose main purpose helps to order the elements and widgets in a user interface (Cards, Modals, Forms, Menus, etc.)
+- Flexbox is a tool from CSS whose main purpose helps to order the items and widgets in a user interface (Cards, Modals, Forms, Menus, etc.)
 
 ![Basics and terminology](https://css-tricks.com/wp-content/uploads/2018/11/00-basic-terminology.svg)
 
